@@ -30,15 +30,27 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
             bool logiczna = true; //albo false, zmienna logiczna; prawda lub fałsz
             bool obliczanie1 = 1 > 2; //wyjdzie False bo 1 nie jest większe od 2; czy jenda wartość jest większa od drugiej
 
+            const string Staua = "niezmienna wartosc"; //jesli chcemy zeby wartosc zmiennej nigdy się nie zmieniła, od razu trzeba nadać wartość
 
-            Console.WriteLine("C# Helou Wołrld"); //instrukcja
+            Console.WriteLine("C# rulz"); //instrukcja
             Console.OutputEncoding = Encoding.GetEncoding("Windows-1250"); //ustawia kodowanie tak żeby wyświetlało polskie znaki w konsoli
             Console.WriteLine(zmienna_tekstowa+"\n Maksymalna długość int to "+zmienna); //instrukcja
-            Console.WriteLine("\n Maksymalna długość bit to " + zmienna_bitowa);// "\n" oznacza przejście do kolejnej linii
-            Console.WriteLine("\n Maksymalna długość short to " + zmienna_short);
-            Console.WriteLine("\n Maksymalna długość long to " + zmienna_long);
+            Console.WriteLine("\n Maksymalna długość "+ zmienna_bitowa.GetTypeCode() +" " + zmienna_bitowa);// "\n" oznacza przejście do kolejnej linii
+            Console.WriteLine("\n Maksymalna długość " + zmienna_short.GetTypeCode() + " to " + zmienna_short);
+            Console.WriteLine("\n Maksymalna długość " + zmienna_long.GetTypeCode() + " to " + zmienna_long);
             Console.WriteLine(obliczanie1);
-            Console.ReadKey(); //instrukcja
+
+            // komentarz jednolinijkowy
+            
+            /*
+             * komentarz wielolinijkowy
+             */
+
+
+
+
+
+            Console.ReadKey(); //żeby okno nie zniknęło od razu po wykonaniu poleceń
         }
     }
 }
