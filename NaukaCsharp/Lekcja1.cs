@@ -28,6 +28,7 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
             //double zajmuje więcej miejsca w pamięci, więc szybsze będzie float ale double bardziej precyzyjne
             char znak1 = 'a'; //przechowuje tylko jeden znak
             bool logiczna = true; //albo false, zmienna logiczna; prawda lub fałsz
+            bool obliczanie1 = 1 > 2; //wyjdzie False bo 1 nie jest większe od 2; czy jenda wartość jest większa od drugiej
 
 
             Console.WriteLine("C# Helou Wołrld"); //instrukcja
@@ -36,6 +37,7 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
             Console.WriteLine("\n Maksymalna długość bit to " + zmienna_bitowa);// "\n" oznacza przejście do kolejnej linii
             Console.WriteLine("\n Maksymalna długość short to " + zmienna_short);
             Console.WriteLine("\n Maksymalna długość long to " + zmienna_long);
+            Console.WriteLine(obliczanie1);
             Console.ReadKey(); //instrukcja
         }
     }
