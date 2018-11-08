@@ -52,8 +52,29 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
             //snippety - jest ich dużo, trzeba poszukać innych fajnych
             //cw TAB TAB - console.writeline
             //for TAB TAB tworzy pętle for
-            
 
+            //konwersja niejawna to po prostu przypisanie zmiennych za pomocą = , np a=b
+            //konwersja jawna to np s = (short)i; , czyli wprost podajemy typ jaki ma teraz mieć 
+            //trzeba brać pod uwagę że jeśli skonwertujemy typ bardziej pojemny na mniej pojemny to wystąpią błędy
+
+            //string input1 = Console.ReadLine();
+            Console.OutputEncoding = Encoding.GetEncoding("Windows-1250");
+           // Console.WriteLine("Napisałeś " +input1);
+            //int i1 = int.Parse(input1) +100; //konwertuje input1 na int i dodaje do niej
+            //Console.WriteLine(i1);
+
+           //var string2 = input1.ToString(); //zamienia na stringa
+            //Console.WriteLine(string2);
+            var string3 = "Hello";
+            var string4 = Console.ReadLine();
+            Console.WriteLine("{0} {1}", string3 ,string4); //zawsze zaczynamy od {0} a potem po kolei argumenty które przypiszemy
+            //Console.ResetColor(); //przywraca standardową kolorystykę konsoli po jakichś zmianach
+
+
+
+
+
+            Console.WriteLine("Dowolny klawisz zakończy program");
             Console.ReadKey(); //żeby okno nie zniknęło od razu po wykonaniu poleceń
         }
     }
