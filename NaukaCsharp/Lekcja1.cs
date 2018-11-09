@@ -68,13 +68,14 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
             var string3 = "Hello";
             var string4 = Console.ReadLine();
             Console.WriteLine("{0} {1}", string3 ,string4); //zawsze zaczynamy od {0} a potem po kolei argumenty które przypiszemy
-            //Console.ResetColor(); //przywraca standardową kolorystykę konsoli po jakichś zmianach
+            Console.ResetColor(); //przywraca standardową kolorystykę konsoli po jakichś zmianach
+
+            // = to przypisanie wartości do zmiennej, == to porównanie wartości
+            //!= czy się coś różni
 
 
 
-
-
-            Console.WriteLine("Dowolny klawisz zakończy program");
+            Console.WriteLine("\nDowolny klawisz zakończy program");
             Console.ReadKey(); //żeby okno nie zniknęło od razu po wykonaniu poleceń
         }
     }
