@@ -1,5 +1,6 @@
 ﻿using System; //jeśli przestrzeń nazw nie jest wyszarzona to znaczy że program jej używa
 using System.Text; //pozwala ustawić kodowanie dzięki czemu w konsoli będą widoczne polskie znaki
+//using System.Management.Automation;
 
 namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, poza nią można nadawać takie same nazwy
 {
@@ -72,9 +73,45 @@ namespace NaukaCsharp //w tej przestrzeni obowiązują nazwy zmiennych i klas, p
 
             // = to przypisanie wartości do zmiennej, == to porównanie wartości
             //!= czy się coś różni
+            //break; -> wychodzi z pętli 
+            //
+            Console.WriteLine("Podaj jakąś liczbę od jodyn do czy");
+            int zmienna_dla_switcha = int.Parse(Console.ReadLine()); //domyślnie concolde.readline to string więc musimy skonwertować
+            switch(zmienna_dla_switcha)
+            {
+                case 1:
+                    Console.WriteLine("Adin");
+                    break;//wyjdź poza pętlę
+                case 2:
+                    Console.WriteLine("Duwa");
+                    break;
+                case 3:
+                    Console.WriteLine("Tri");
+                    break;
+                default: //wszystkie inne przypadki
+                    Console.WriteLine("no weź");
+                    goto koniec;
+            }
+
+            //tablica to zbiór danych tego samego typu, każdy rekord w innej komórce pamięci (w indeksach)
+            int[] tablica1 = new int[3]; //tworzymy nowy obiekt tablicy typu int o określonym rozmiarze bez zadeklarowanych elementów
+            string[] dni_tygodnia = { "Poniedziałek", "Wtorek", "Środa", "Czwartek","Piątek","Sobota","Niedziela"}; // od razu podajemy elementy
+            int[,] tablica_wielowymiarowa = new int[2, 3]; //po lewej określamy liczbę wymiarów, po prawej liczbę komórek, czyli tutaj dwa wiersze na 3 kolumny  
+            //nie można roszerzyć tablicy
+            for (int i = 0; i < dni_tygodnia.Length; i++)
+            {
+                Console.WriteLine("Dzień nr " + (i+1) +" to " + dni_tygodnia[i]);
+            }
+
+            Console.WriteLine(tablica_wielowymiarowa.GetLength(0)); //podaj wielkość pierwszego wymiaru tablicy wielowymariowej
+            Console.WriteLine(tablica_wielowymiarowa.GetLength(1));  //podaj wielkość drugiego wymiaru tablicy wielowymariowej
+            //Array.Sort(tablica); <- sortuje wartości tablicy rosnąco
+            //Array.Reverse(tablica); <- odwraca kolejnośc tablicy - po uprzednim posortowaniu
+            
 
 
 
+        koniec: //etykieta do której możemy się odwołać za pomocą goto
             Console.WriteLine("\nDowolny klawisz zakończy program");
             Console.ReadKey(); //żeby okno nie zniknęło od razu po wykonaniu poleceń
         }
